@@ -4,9 +4,9 @@ import LineModule from "../module/line";
 import {BarsOutlined, SwapOutlined, PlusOutlined, SplitCellsOutlined, CopyOutlined} from '@ant-design/icons';
 
 const {Panel} = Collapse;
-import LineModule from "./module/line";
 import {useState} from "react";
 import ModalTemplate from "../modal";
+import './index.less';
 
 const content = (
     <div>
@@ -27,7 +27,7 @@ function SideBar() {
     const [modalStatus, setModalStatus] = useState<any>({
         visible: false
     });
-    return <>
+    return <section className={'sidebar-container'}>
         <div className={'home-container__left-header'}>
             <div className={'home-container__left-header__container'}>
                 <div className={'home-container__left-header__left'}>
@@ -84,7 +84,7 @@ function SideBar() {
                 method={setModalStatus}
             />
         }
-    </>
+    </section>
 }
 
 export default SideBar;
