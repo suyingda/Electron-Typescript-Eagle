@@ -2,6 +2,7 @@ import * as React from "react";
 import {Collapse, Popover} from "antd";
 import LineModule from "../module/line";
 import {BarsOutlined, SwapOutlined, PlusOutlined, SplitCellsOutlined, CopyOutlined} from '@ant-design/icons';
+// import DragTree from './../components/DragTree/index'
 
 const {Panel} = Collapse;
 import {useState} from "react";
@@ -53,7 +54,7 @@ function SideBar() {
                 </div>
             </div>
 
-            <div>Eagle-directory<CopyOutlined/></div>
+            <div className={'home-container__left-directory__container'}>Eagle-directory&nbsp;<CopyOutlined/></div>
         </div>
         <div className={'home-container__left-middle'}>
             <LineModule Icon={<CopyOutlined/>} title={'All'} value={100}/>
@@ -64,15 +65,16 @@ function SideBar() {
             <LineModule Icon={<CopyOutlined/>} title={'Trash'} value={100}/>
             <Collapse defaultActiveKey={['1', '2']}>
                 <Panel header="Smarts Folders" key="1">
-                    <div><CopyOutlined/><span>All</span></div>
-                    <div><CopyOutlined/><span>Uncategorized</span></div>
-                    <div><CopyOutlined/><span>Untagged</span></div>
-                    <div><CopyOutlined/><span>Random</span></div>
-                    <div><CopyOutlined/><span>All Tags</span></div>
-                    <div><CopyOutlined/><span>Trash</span></div>
+                    <div><CopyOutlined/>&nbsp;<span>All</span></div>
+                    <div><CopyOutlined/>&nbsp;<span>Uncategorized</span></div>
+                    <div><CopyOutlined/>&nbsp;<span>Untagged</span></div>
+                    <div><CopyOutlined/>&nbsp;<span>Random</span></div>
+                    <div><CopyOutlined/>&nbsp;<span>All Tags</span></div>
+                    <div><CopyOutlined/>&nbsp;<span>Trash</span></div>
+                    <LineModule Icon={<CopyOutlined/>} title={'All'} />
                 </Panel>
                 <Panel header="Folders" key="2">
-                    <p>23</p>
+                    {/*<DragTree/>*/}
                 </Panel>
             </Collapse>
         </div>

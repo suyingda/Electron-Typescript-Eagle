@@ -6,7 +6,7 @@ function LineModule(props: any) {
     const {Icon, title, value} = props || {};
     return <div className={'line-module'}>
         <div>
-            {Icon}<span>{title}</span>
+            {Icon}&nbsp;<span>{title}</span>
         </div>
         <div>
             {value || 0}

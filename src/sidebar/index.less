@@ -2,9 +2,11 @@
 .sidebar-container {
   .home-container__left-header {
     width: 100%;
-    height: 40px;
-
+    height: 55px;
     border: 1px solid gold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .home-container__left-header__container {
       width: 100%;
@@ -13,7 +15,7 @@
       justify-content: space-between;
 
       .home-container__left-header__left {
-        padding-left: 10px;
+        padding-left: 20px;
         //width: 20px;
         height: 20px;
         border: 1px solid green;
@@ -23,18 +25,26 @@
         text-align: right;
         width: 120px;
         height: 20px;
-        border: 1px solid green;
+        //border: 1px solid green;
 
         span {
           display: inline-block;
           //padding: 0 5px;
-          border: 1px solid red;
+          //border: 1px solid red;
           margin-right: 5px;
           cursor: pointer;
         }
       }
     }
 
+    .home-container__left-directory__container {
+      //padding: 20px 0 10px 15px;
+      //align-self: flex-end;
+      //flex: 1;
+      padding-left: 15px;
+      height: 28px;
+      line-height: 28px;
+    }
   }
 
   .home-container__left-middle {
