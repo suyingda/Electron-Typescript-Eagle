@@ -10,6 +10,8 @@
   },
   "include": [
     "./server/**/*",
-    "./src/**/*"
+    "./electron/**/*",
+    "./src/**/*",
+    "./assets/**/*"
   ]
 }

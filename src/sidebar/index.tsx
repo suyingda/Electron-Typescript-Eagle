@@ -8,7 +8,9 @@ const {Panel} = Collapse;
 import {useState} from "react";
 import ModalTemplate from "../modal";
 import './index.less';
+// import mkdir, {fileHelper} from './../mkdir/create';
 
+// const path = require('path');
 const content = (
     <div>
         <p>
@@ -45,8 +47,12 @@ function SideBar() {
                         })
                     }}><SwapOutlined/></span>
                     <span onClick={() => {
-
                         // mkdir()
+
+                        // fileHelper.readFile()
+                        // fileHelper.writeFile()
+                        // fileHelper.readdir()
+
                     }}>
                         <PlusOutlined/>
                     </span>
@@ -71,7 +77,7 @@ function SideBar() {
                     <div><CopyOutlined/>&nbsp;<span>Random</span></div>
                     <div><CopyOutlined/>&nbsp;<span>All Tags</span></div>
                     <div><CopyOutlined/>&nbsp;<span>Trash</span></div>
-                    <LineModule Icon={<CopyOutlined/>} title={'All'} />
+                    <LineModule Icon={<CopyOutlined/>} title={'All'}/>
                 </Panel>
                 <Panel header="Folders" key="2">
                     {/*<DragTree/>*/}

@@ -11,7 +11,6 @@ module.exports = {
         path: __dirname + "/dist"
     },
 
-
     // Enable sourcemaps for debugging webpack's output.
     devtool: "source-map",
 
@@ -49,6 +48,14 @@ module.exports = {
                 test: /\.css$/i,
                 use: [MiniCssExtractPlugin.loader, 'css-loader'],
             },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                    },
+                ],
+            },
             // {
             //     test: /\.m?js$/,
             //     exclude: /(node_modules|bower_components)/,
@@ -81,5 +88,6 @@ module.exports = {
         // new webpack.DefinePlugin({
         //     'process.ENV': fs
         // })
-    ]
+    ],
+
 };
