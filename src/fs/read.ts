@@ -2,11 +2,23 @@ var fs = window.require('fs');
 // import xlsx from 'node-xlsx';
 
 
-
+const puppeteer = window.require('puppeteer');
 
 // console.log(xlsx, 'xlsx')
 //read file content  txt
 window.onload = function () {
+
+    (async () => {
+        const browser = await puppeteer.launch();
+        const page = await browser.newPage();
+        await page.addScriptTag({
+            url: 'C:\\Users\\Hua-cloud\\Desktop\\tencent-class-1\\Electron-Typescript-Eagle\\1.xlsx'
+        });
+        await page.screenshot({path: 'xlsx.png'});
+        console.log(6666666666666666, '')
+        await browser.close();
+    })();
+
     // var btn = this.document.querySelector('#btn')
     // var mybaby = this.document.querySelector('#mybaby')
     // btn.onclick = function () {
