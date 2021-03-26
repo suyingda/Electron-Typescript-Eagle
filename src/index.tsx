@@ -1,25 +1,21 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {
-    BrowserRouter as Router,
+    BrowserRouter,
+    Router,
     Switch,
     Route,
     Link
 } from "react-router-dom";
 import './app.css';
 import Home from './Home';
+import CanvasTemplate from "./canvas";
 
 const R = () => {
     return <Switch>
-        <Route path="/eagle">
-            <Home/>
-        </Route>
-        <Route path="/canvas">
-            <Home/>
-        </Route>
-        <Route path="/">
-            <Nav/>
-        </Route>
+        <Route exact path="/" component={Nav}/>
+        <Route path="/eagle" component={Home}/>
+        <Route path="/canvas" component={CanvasTemplate}/>
     </Switch>
 }
 const Nav = () => {
@@ -36,9 +32,9 @@ const Nav = () => {
     </React.Fragment>
 }
 const App = () => {
-    return <Router>
+    return <BrowserRouter>
         <R/>
-    </Router>
+    </BrowserRouter>
 
 }
 ReactDOM.render(
