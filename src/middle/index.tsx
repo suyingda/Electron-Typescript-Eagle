@@ -1,10 +1,10 @@
 import * as React from 'react';
 import {useEffect} from "react";
 
-import workSheetsFromBuffer from './../fs/read';
+// import workSheetsFromBuffer from './../fs/read';
 // const {remote} = window.require && window.require('electron') || {};
 // const {ipcRender} = remote || {};
-console.log(workSheetsFromBuffer,'workSheetsFromBuffer')
+// console.log(workSheetsFromBuffer,'workSheetsFromBuffer')
 function Middle() {
     useEffect(() => {
         const getNode = document.getElementById('drag');

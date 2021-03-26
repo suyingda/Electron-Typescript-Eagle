@@ -1,6 +1,7 @@
 import * as React from "react";
 import {Collapse, Popover} from "antd";
 import LineModule from "../module/line";
+import  {withRouter} from 'react-router-dom';
 import {BarsOutlined, SwapOutlined, PlusOutlined, SplitCellsOutlined, CopyOutlined} from '@ant-design/icons';
 // import DragTree from './../components/DragTree/index'
 
@@ -26,11 +27,14 @@ const content = (
     </div>
 );
 
-function SideBar() {
+function SideBar(props?: any) {
     const [modalStatus, setModalStatus] = useState<any>({
         visible: false
     });
-    return <section className={'sidebar-container'}>
+    return <section className={'sidebar-container'} onClick={() => {
+        console.log(props)
+        props.history.push('/')
+    }}>
         <div className={'home-container__left-header'}>
             <div className={'home-container__left-header__container'}>
                 <div className={'home-container__left-header__left'}>
@@ -95,4 +99,4 @@ function SideBar() {
     </section>
 }
 
-export default SideBar;
+export default withRouter(SideBar);
