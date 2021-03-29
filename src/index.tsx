@@ -9,13 +9,15 @@ import {
 } from "react-router-dom";
 import './app.css';
 import Home from './Home';
-import CanvasTemplate from "./canvas";
+// import CanvasTemplate from "./canvas";
+import SvgTemplate from "./svg";
 
 const R = () => {
     return <Switch>
         <Route exact path="/" component={Nav}/>
         <Route path="/eagle" component={Home}/>
-        <Route path="/canvas" component={CanvasTemplate}/>
+        {/*<Route path="/canvas" component={CanvasTemplate}/>*/}
+        <Route path="/svg" component={SvgTemplate}/>
     </Switch>
 }
 const Nav = () => {
@@ -27,6 +29,9 @@ const Nav = () => {
             </li>
             <li>
                 <Link to="/canvas">canvas</Link>
+            </li>
+            <li>
+                <Link to="/svg">svg</Link>
             </li>
         </ul>
     </React.Fragment>
